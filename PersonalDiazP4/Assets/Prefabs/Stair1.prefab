@@ -1075,7 +1075,7 @@ GameObject:
   - component: {fileID: 548053149303469587}
   - component: {fileID: 201229015110098439}
   - component: {fileID: 2481784478680127433}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Stair1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1134,7 +1134,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 126
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!65 &2481784478680127433
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1154,8 +1154,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 12, y: 6.4955654, z: 8.0629635}
-  m_Center: {x: 4, y: -5.7477818, z: 9.486231}
+  m_Size: {x: 12.020339, y: 6.4955654, z: 8.120029}
+  m_Center: {x: 3.9898305, y: -5.7477818, z: 9.457699}
 --- !u!1 &6336687243984261877
 GameObject:
   m_ObjectHideFlags: 0
