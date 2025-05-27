@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
     public float xRange = 20;
     public float zRange = 20;
 
+    public int health;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,8 +46,12 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter(Collision other)
     {
-        
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(gameObject);
+            Debug.Log("dead lmao");
+        }
     }
 }
