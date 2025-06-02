@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Slash : MonoBehaviour
 {
+    public bool slash;
+
     // Start is called before the first frame update
     void Start()
     {

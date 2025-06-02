@@ -20,12 +20,4 @@ public class TruePlayer : MonoBehaviour
         
     }
 
-    void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.CompareTag("Enemy"))
-        {
-            Destroy(gameObject);
-            Debug.Log("dead lmao");
-        }
-    }
 }

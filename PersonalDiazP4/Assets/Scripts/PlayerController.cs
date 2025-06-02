@@ -13,7 +13,9 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        GameObject slash = GameObject.Find("Slash");
+        Slash SlashScript = slash.GetComponent<Slash>();
+        slash.SetActive(false);
     }
 
     // Update is called once per frame
@@ -44,6 +46,19 @@ public class PlayerController : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movement), 0.15F);
         transform.Translate(movement * speed * Time.deltaTime, Space.World);
 
+        if (Input.GetKey(KeyCode.Space))
+        {
+            slash.gameObject.SetActive(true);
+        }
+
     }
 
+    void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(gameObject);
+            Debug.Log("dead lmao");
+        }
+    }
 }
